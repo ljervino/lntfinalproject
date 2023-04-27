@@ -24,10 +24,9 @@ class TableRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|string|min:5|max:20',
-            'age'=>'required|integer|min:21',
-            'address'=>'required|string|min:10|max:40',
-            'phone'=>'required|string|regex:/(08)/|min:9|max:12'
+            'name'=>'required|string|min:5|max:80',
+            'price'=>'required|integer|min:1',
+            'quantity'=>'required|integer|min:1'
         ];
     }
 }

@@ -17,9 +17,8 @@ class TableController extends Controller
     
         Table::create([
             'name' => $request->name,
-            'age' => $request->age,
-            'address' => $request->address,
-            'phone' => $request->phone,
+            'price' => $request->price,
+            'quantity' => $request->quantity,
         ]);
 
 
@@ -42,9 +41,8 @@ class TableController extends Controller
 
         $table->update([
             'name' => $request->name,
-            'age' => $request->age,
-            'address' => $request->address,
-            'phone' => $request->phone,
+            'price' => $request->price,
+            'quantity' => $request->quantity,
         ]);
 
         return redirect(route('getTables'));

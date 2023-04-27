@@ -26,32 +26,24 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="age" class="form-label">Age</label>
-                    <input name="age" type="numeric" value="{{$table->age}}" class="form-control" id="formGroupExampleInput" placeholder="Input Age">
-                    @error('age')
+                    <label for="price" class="form-label" value="Rp. ">Price</label>
+                    <input name="price" type="numeric" value="{{$table->price}}" class="form-control" id="formGroupExampleInput" placeholder="Input Price">
+                    @error('price')
                     <div class="text-danger">
                         {{ $message }}
                     </div>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
-                    <input name="address" type="text" value="{{$table->address}}" class="form-control" id="formGroupExampleInput" placeholder="Input Address">
-                    @error('address')
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input name="quantity" type="numeric" value="{{$table->quantity}}" class="form-control" id="formGroupExampleInput" placeholder="Input Quantity">
+                    @error('quantity')
                     <div class="text-danger">
                         {{ $message }}
                     </div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input name="phone" type="text" value="{{$table->phone}}" class="form-control" id="formGroupExampleInput" placeholder="Input Phone Number">
-                    @error('phone')
-                    <div class="text-danger">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
+                
                 <div class="card-body text-center">
                     <button type="submit" class="btn btn-success">Update</button>
                 </div>

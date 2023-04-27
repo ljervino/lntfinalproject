@@ -26,9 +26,8 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Age</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Phone Number</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                             </tr>
@@ -38,11 +37,10 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $table->name }}</td>
-                                <td>{{ $table->age }}</td>
-                                <td>{{ $table->address }}</td>
-                                <td>{{ $table->phone }}</td>
+                                <td>Rp. {{ $table->price }}</td>
+                                <td>{{ $table->quantity }}</td>
                                 <td>
-                                    <a href={{route('getTableById', ['id'=>$table->id])}}"><button type="submit" class="btn btn-success col-md">Edit</button></a>
+                                    <a href={{route('getTableById', ['id'=>$table->id])}}><button type="submit" class="btn btn-success col-md">Edit</button></a>
                                 </td>
                                 <td>
                                     <form action="{{route('delete',['id'=>$table->id])}}" method="post">
